@@ -28,7 +28,12 @@ get_header();
         ?> <!-- args -->
 
             <li class="card">
-                <?php the_title(); ?> <!-- the title -->
+                <?php the_post_thumbnail() ?>
+                <div class="contenido">
+                    <a href="<?php the_permalink(); ?>">
+                        <h3><?php the_title(); ?></h3>
+                    </a>
+                </div> <!-- the title -->
             </li>
         <?php
         }

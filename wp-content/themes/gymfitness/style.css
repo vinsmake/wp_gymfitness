@@ -1,0 +1,374 @@
+/*
+    Theme Name: Gym Fitness
+    Theme URI: 
+    Author: Juan Pablo De la torre Valdez
+    Author URI: http://twitter.com/codigoconjuan
+    Description: Theme Diseñado para el Gimnasio GymFitness
+    Version: 1.0
+    License: GNU General Public License v2 or later
+    License URI: http://www.gnu.org/licenses/gpl-2.0.html
+    Tags: Gym, gimnasio, flexbox, css grid, mobile first
+    Text Domain: gymfitness
+*/
+
+/*-----------------------------------*\
+            FONTS VARIABLE
+    Here we declate the variable of
+    the fonts, just below root you
+    can select the font-face
+
+    You should change the fonts, but not
+    the names, so all components can fix
+    with the new fonts. 
+
+    We use three fonts in every design,
+    1.- Primary (default font, text and
+    subheaders, easy to read)
+    2.- Secondary (headliners)
+    3.- Accent (rarely used, mostly for
+    buttons, tags, dates, links, etc.)
+\*-----------------------------------*/
+
+@font-face {
+    font-family: 'FontPrimaryNormal';
+    src: url('./fonts/Roboto-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'FontPrimaryBold';
+    src: url('./fonts/Roboto-Bold.ttf') format('truetype');
+    font-weight: bold;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'FontPrimaryItalic';
+    src: url('./fonts/Roboto-Italic.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+:root {
+
+    --ff-1l: 'FontPrimaryNormal';
+    --ff-1n: 'FontPrimaryNormal';
+    --ff-1b: 'FontPrimaryBold';
+    --ff-1ni: 'FontPrimaryItalic';
+
+    --fs-text: 2rem;
+    --fs-1: 2.8rem;
+    --fs-2: 4.4rem;
+    --fs-3: 6rem;
+    --fs-4: 7.6rem;
+    --fs-5: 9.2rem;
+    --fs-6: 9.8rem;
+    --fs-7: 11.4rem;
+    --fs-8: 13rem;
+    --fs-9: 13.6rem;
+}
+
+@media (max-width: 1280px) {
+    :root {
+        --fs-1: 2.55rem;
+        --fs-2: 4rem;
+        --fs-3: 5.45rem;
+        --fs-4: 6.9rem;
+        --fs-5: 8.35rem;
+        --fs-6: 8.95rem;
+        --fs-7: 10.45rem;
+        --fs-8: 12rem;
+        --fs-9: 12.55rem;
+    }
+}
+
+@media (max-width: 1024px) {
+    :root {
+        --fs-1: 2.3rem;
+        --fs-2: 3.6rem;
+        --fs-3: 4.9rem;
+        --fs-4: 6.2rem;
+        --fs-5: 7.5rem;
+        --fs-6: 8rem;
+        --fs-7: 9.35rem;
+        --fs-8: 10.8rem;
+        --fs-9: 11.4rem;
+    }
+}
+
+@media (max-width: 768px) {
+    :root {
+        --fs-text: 1.8rem;
+        --fs-1: 2.05rem;
+        --fs-2: 3.2rem;
+        --fs-3: 4.35rem;
+        --fs-4: 5.5rem;
+        --fs-5: 6.65rem;
+        --fs-6: 7.1rem;
+        --fs-7: 8.25rem;
+        --fs-8: 9.6rem;
+        --fs-9: 10.25rem;
+    }
+}
+
+@media (max-width: 576px) {
+    :root {
+        --fs-1: 2rem;
+        --fs-2: 2.4rem;
+        --fs-3: 2.8rem;
+        --fs-4: 3.4rem;
+        --fs-5: 4rem;
+        --fs-6: 4.6rem;
+        --fs-7: 5.2rem;
+        --fs-8: 5.8rem;
+        --fs-9: 6.4rem;
+    }
+}
+
+/*-----------------------------------*\
+  #COLORS#
+
+  You should change the colors, but not
+  the names, so all components can fix
+  with the new colors.
+
+  We use four special colors in every
+  design:
+  1.- action (The color of the buttons
+      we want the user to click)
+  2.- accent (The color of the things
+      we want the user to see)
+  3.- detail (rarely used, mostly for
+      data, special part of texts, etc.)
+  4.- effect (If there is a effect in
+      the design, it will have this)
+
+  Finally, we have the background color
+  and text color.
+
+  You can use this box to comment your
+  color palette:
+  
+  pink: hsl(288, 99%, 65%);
+  blue: hsl(180, 100%, 46%) ;
+  yellow: hsl(58, 87%, 53%);
+  green: hsl(103, 100%, 50%);
+\*-----------------------------------*/
+
+:root {
+    --c-background: #ffffff;
+    --c-text: #010C19;
+
+    --c-action: #FF5B00;
+    --c-accent: #ffffff;
+    --c-detail: #393939;
+    --c-effect: #59a26a;
+}
+
+/*-----------------------------------*\
+            HTML CONFIG
+    Here yoy change the REM size to
+    10px, making easy to do the math
+\*-----------------------------------*/
+html {
+    font-size: 62.5%;
+}
+
+body {
+    background-color: var(--c-background);
+    color: var(--c-text);
+    font-family: var(--ff-1n);
+    font-size: var(--fs-text);
+    overflow-x: hidden;
+}
+
+/*-----------------------------------*\
+            CUSTOM VARIABLE
+  Here you can put all your custom
+  variables and adit them when you
+  need it. DON'T forget to change
+  your mediaqueries if necesary
+\*-----------------------------------*/
+
+
+/*-----------------------------------*\
+            CUSTOM STYLES
+  That it, go ahead
+\*-----------------------------------*/
+/* Utilidades */
+.contenedor {
+    width: min(95%, 120rem);
+    margin: 0 auto;
+}
+
+.text-center {
+    text-align: center;
+}
+
+.text-primary {
+    color: var(--c-action);
+}
+
+.title {
+    font-size: var(--fs-3);
+}
+
+.text-blanco {
+    color: var(--c-accent);
+}
+
+.seccion {
+    padding: 5rem 0;
+}
+
+hr {
+    border: 1px solid var(--c-action);
+}
+
+/* header */
+.header {
+    background-color: var(--c-detail);
+    padding: 2rem 0;
+}
+
+.barra-navegacion {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+@media (min-width: 768px) {
+    .barra-navegacion {
+        flex-direction: row;
+        justify-content: space-between;
+    }
+}
+
+.menu-principal {
+    /* display: none; */
+}
+
+@media (min-width: 768px) {
+
+    .menu-principal {
+        display: block;
+    }
+
+    .menu-principal .menu {
+        display: flex;
+    }
+}
+
+.menu-principal .menu-item {
+    font-family: var(--ff-1b);
+    color: var(--c-accent);
+    font-size: var(--fs-1);
+    display: block;
+    text-align: center;
+    padding: 0.5rem 2rem;
+}
+
+
+
+.menu-principal .current_page_item  {
+    border-bottom: 3px solid var(--c-action);
+}
+
+@media (min-width: 768px) {
+    .menu-principal .menu-item {
+        position: relative;
+        z-index: 1;
+    }
+
+    .menu-principal a::before,
+    .menu-principal a::after {
+        position: absolute;
+        left: 0;
+        content: '';
+        display: block;
+        width: 100%;
+        height: 50%;
+        background-color: var(--c-action);
+        z-index: -1;
+        transform: scaleX(0);
+        transition: transform .6s;
+    }
+
+    .menu-principal a::before {
+        top: 0;
+        transform-origin: left;
+    }
+
+    .menu-principal a::after {
+        top: 50%;
+        transform-origin: right;
+    }
+
+    .menu-principal a:hover::before {
+        transform: scaleX(1);
+    }
+
+    .menu-principal a:hover::after {
+        transform: scaleX(1);
+    }
+}
+
+/* Paginas */
+
+.imagen-destacada {
+    /* width: 90%;
+    display: block; */
+    margin: 2rem auto;
+}
+
+/* contenido centrado */
+.contenido-centrado {
+    width: min(95%, 80rem);
+    margin: 0 auto;
+}
+
+/* footer */
+.contenido-footer {
+    padding: 4rem 0;
+}
+
+@media (min-width: 768px) {
+    .contenido-footer {
+        display: flex;
+        justify-content: space-between;
+    }
+}
+
+
+.footer .menu-principal .menu-item{
+    color: var(--c-text);
+    display: block;
+    font-size: var(--fs-1);
+    padding: 1rem 1rem;
+}
+
+.footer .menu-principal a::before,
+.footer .menu-principal a::after {
+    display: none;
+}
+
+
+@media (max-width: 768px) {
+    .footer .current_page_item {
+        border: none;
+    }
+}
+
+
+.copyright {
+    text-align: center;
+    font-size: var(--fs-text);
+    font-family: var(--ff-1ni);
+    margin: 2rem 0 0 0;
+}
+ @media (min-width: 768px) {
+    .copyright {
+        margin: 0;
+    }
+ }

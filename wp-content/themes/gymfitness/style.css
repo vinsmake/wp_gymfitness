@@ -385,6 +385,11 @@ hr {
 .card {
     background-image: linear-gradient(to bottom, transparent 0, rgb(0 0 0 / .7));
     position: relative;
+    overflow: hidden;
+}
+
+.card:hover img {
+    transform: scale(1.1);
 }
 
 .card img {
@@ -393,6 +398,7 @@ hr {
     z-index: -1;
     height: 40rem;
     object-fit: cover;
+    transition: transform 0.3s ease;
 }
 
 .card .contenido {
@@ -411,4 +417,15 @@ hr {
 }
 .card .contenido p {
     font-size: var(--fs-text);
+}
+
+/* sidebar */
+
+@media (min-width: 768px) {
+    .con-sidebar {
+        display: grid;
+        grid-template-columns: 2fr 1fr;
+        gap: 4rem;
+
+    }
 }

@@ -11,6 +11,11 @@ get_header();
 
 <!-- WordPress Loop -->
 <main class="seccion contenedor">
+
+    <?php
+    get_template_part('template-parts/pagina');
+    ?>
+
     <ui class="listado-grid">
 
 

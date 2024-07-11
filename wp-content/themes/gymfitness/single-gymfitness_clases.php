@@ -5,12 +5,14 @@ get_header();
 <main class="contenedor seccion con-sidebar">
     <sections class="contenido-principal">
         <?php
-        get_template_part('template-parts/pagina');
+        get_template_part('template-parts/clase');
         ?>
     </sections>
-    <aside>
-        <h2>sidebar</h2>
-    </aside>
+
+    <?php 
+        get_sidebar('aside');
+    ?>
+
 </main>
 
 <?php 

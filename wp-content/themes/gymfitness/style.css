@@ -426,6 +426,14 @@ hr {
         display: grid;
         grid-template-columns: 2fr 1fr;
         gap: 4rem;
+        text-align: justify;
+
 
     }
+}
+
+.informacion-clase {
+    font-weight: bold;
+    font-size: 2rem;
+    text-align: center;
 }

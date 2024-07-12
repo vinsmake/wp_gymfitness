@@ -437,3 +437,30 @@ hr {
     font-size: 2rem;
     text-align: center;
 }
+
+.clases-sidebar {
+
+}
+
+.clases-sidebar li {
+    border-bottom: 2px solid var(--c-action);
+    padding: 2rem 0;
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    gap: 2rem;
+    align-items: center;
+}
+
+.clases-sidebar li:last-of-type {
+    border: none;
+}
+
+.clases-sidebar .contenido-clase h3 {
+    color: var(--c-action);
+    font-weight: var(--fw-b);
+}
+
+.clases-sidebar .contenido-clase p {
+    color: var(--c-text);
+    font-weight: var(--fw-n);
+}

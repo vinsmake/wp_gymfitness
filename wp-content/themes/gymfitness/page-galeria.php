@@ -30,7 +30,7 @@ get_header();
                     ?>
 
                     <li>
-                        <a href="<?php echo $imagen_grande; ?>">
+                        <a href="<?php echo $imagen_grande; ?>" data-lightbox='galeria'>
                             <img src="<?php echo $imagen_grande; ?>" alt="Imagen Galeria">
                         </a>
                     </li>

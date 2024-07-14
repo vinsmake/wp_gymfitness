@@ -155,7 +155,7 @@
     --c-action: #FF5B00;
     --c-accent: #ffffff;
     --c-detail: #393939;
-    --c-effect: #59a26a;
+    --c-effect: #f1f1f1;
 }
 
 /*-----------------------------------*\
@@ -204,6 +204,8 @@ body {
 
 .title {
     font-size: var(--fs-3);
+    font-weight: bold;
+    text-transform: uppercase;
 }
 
 .text-blanco {
@@ -420,6 +422,98 @@ hr {
     font-size: var(--fs-text);
 }
 
+.card .meta {
+    font-size: var(--fs-1);
+    font-weight: 700;
+}
+
+.card .meta span {
+    color: var(--c-action)
+}
+
+/* Categorias de cards */
+.card .post-categories {
+    position: absolute;
+    top: 2rem;
+    left: 2rem;
+    display: flex;
+    gap: 2rem;
+}
+.card .post-categories li {
+    background-color: var(--c-action);
+    padding: .5rem 1rem;
+    border-radius: .5rem;
+}
+.card .post-categories a {
+    color: var(--c-accent);
+    text-transform: uppercase;
+    font-weight: 700;
+    font-size: 1.6rem;
+}
+.card:hover img {
+    transform: scale(1.2);
+}
+.card img {
+    display: block;
+    position: relative;
+    z-index: -1;
+    height: 40rem;
+    object-fit: cover;
+    transition: transform 300ms ease;
+}
+.card .contenido {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    padding: 2rem;
+}
+.card .contenido h3 {
+    color: var(--c-accent);
+    margin: 0;
+}
+.card .contenido p,
+.card .contenido .meta a {
+    color: var(--c-accent);
+}
+.card .meta {
+    font-size: 1.4rem;
+    font-weight: 700;
+}
+.card .meta span {
+    color: var(--c-action)
+}
+
+/** Información meta **/
+.meta-info {
+    background-color: var(--c-effect);
+    padding: 2rem;
+}
+@media (min-width: 992px) {
+    .meta-info {
+        display: flex;
+        justify-content: space-between;
+    }
+}
+.meta-info p,
+.meta-info a {
+    font-size: 1.6rem;
+    font-weight: 700;
+    color: var(--c-text);
+}
+.meta-info span {
+    color: var(--c-action);
+    font-weight: bolder;
+}
+.meta-info .categoria {
+    display: flex;
+    align-items: center;
+    gap: .5rem;
+}
+.meta-info .post-categories {
+    display: flex;
+    gap: 1rem;
+}
+
 /* sidebar */
 
 @media (min-width: 768px) {
@@ -504,4 +598,44 @@ hr {
 .galeria-imagenes img {
     height: 300px;
     object-fit: cover;
+}
+
+/** Formulario de Contacto **/
+
+.wpcf7-form label {
+    font-weight: 700;
+}
+.wpcf7-form .wpcf7-form-control {
+    width: 100%;
+    border: 1px solid var(--c-detail);
+    padding: 1rem;
+}
+.wpcf7-form .wpcf7-submit {
+    background-color: var(--c-action);
+    font-size: 2rem;
+    font-family: var(--ff-1);
+    padding: 1.2rem;
+    color: var(--c-accent);
+}
+.wpcf7-form .wpcf7-submit:hover {
+    cursor: pointer;
+}
+.wpcf7-form .wpcf7-not-valid-tip {
+    background-color: rgb(200, 6, 6);
+    color: var(--c-accent);
+    padding: .5rem;
+    margin: .5rem 0;
+    display: block;
+    font-size: 1.4rem;
+}
+
+.wpcf7-form .wpcf7-spinner {
+    display: block;
+    margin: 2rem auto 0 auto;
+    background-color: var(--c-action);
+    opacity: 1;
+}
+
+.mapa {
+    margin-bottom: 5rem;
 }

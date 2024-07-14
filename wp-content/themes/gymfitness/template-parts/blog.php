@@ -1,4 +1,5 @@
 <li class="card">
+    <?php the_category(); ?>
     <?php the_post_thumbnail() ?>
     <div class="contenido">
         <a href="<?php the_permalink(); ?>">

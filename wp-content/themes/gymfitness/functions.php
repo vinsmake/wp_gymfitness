@@ -53,3 +53,16 @@ function gymfitness_widgets() {
     );
 }
 add_action('widgets_init', 'gymfitness_widgets');
+
+// Crear shortcode
+function gymfitness_ubicacion_shortcode(){
+    ?>
+
+    <div class="mapa">
+        <?php 
+            the_field('ubicacion');
+        ?>
+    </div>
+    <?php
+}
+add_shortcode('gymfitness_ubicacion', 'gymfitness_ubicacion_shortcode');

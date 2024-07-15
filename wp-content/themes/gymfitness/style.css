@@ -639,3 +639,9 @@ hr {
 .mapa {
     margin-bottom: 5rem;
 }
+
+/* home */
+.bienvenida p {
+    max-width: 80%;
+    margin: 0 auto;
+}

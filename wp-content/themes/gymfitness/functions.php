@@ -2,6 +2,7 @@
 
 /* widgets setup */
 require get_template_directory() . '/includes/widgets.php';
+require get_template_directory() . '/includes/queries.php';
 
 /* theme setup */
 function gymfitness_setup()

@@ -47,6 +47,13 @@ get_header();
     </div>
 </main>
 
+<section class="contenedor seccion">
+    <h2 class="text-center text-primary title">Nuestros intrusctores</h2>
+    <p class="text-center">Instructores que te ayudaran en tu camino.</p>
+    <?php gymfitness_instructores(); ?>
+</section>
+
+
 <?php
 get_footer();
 ?>

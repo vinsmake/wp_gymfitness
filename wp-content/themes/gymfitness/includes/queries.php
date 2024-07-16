@@ -46,4 +46,56 @@ function gymfitness_lista_clases($cantidad = -1)
 <?php
 }
 
+function gymfitness_instructores()
+{
 ?>
+    <ui class="listado-grid instructores">
+
+
+        <?php
+
+        $args = array(
+            'post_type' => 'instructores'
+        );
+
+        $instructores = new WP_Query($args);
+
+        while ($instructores->have_posts()) {
+            $instructores->the_post();
+
+        ?>
+
+            <li class="instructor">
+                <?php the_post_thumbnail('large'); ?>
+                <div class="contenido text-center">
+                    <h3><?php the_title(); ?></h3>
+                    <?php the_content() ?>
+                    <div class="especialidad">
+                        <?php
+                        $esp = get_field('especialidad');
+                        foreach ($esp as $e) { ?>
+                            <span class="etiqueta">
+                                <?php echo esc_html($e);  ?>
+                            </span>
+                        
+                        
+                        <?php 
+                        }
+                        ?>
+                    </div>
+                </div>
+
+
+            </li>
+        <?php
+        }
+        wp_reset_postdata();
+        ?> <!-- end while, reset postdata -->
+
+    </ui>
+
+
+
+
+<?php
+};

@@ -1,9 +1,10 @@
 <?php
 
+/* Clases query */
 function gymfitness_lista_clases($cantidad = -1)
 {
 ?>
-    <ui class="listado-grid">
+    <ul class="listado-grid">
 
 
         <?php
@@ -42,14 +43,15 @@ function gymfitness_lista_clases($cantidad = -1)
         ?> <!-- end while, reset postdata -->
 
 
-    </ui>
+    </ul>
 <?php
 }
 
+/* Intructors query */
 function gymfitness_instructores()
 {
 ?>
-    <ui class="listado-grid instructores">
+    <ul class="listado-grid instructores">
 
 
         <?php
@@ -68,7 +70,7 @@ function gymfitness_instructores()
             <li class="instructor">
                 <?php the_post_thumbnail('large'); ?>
                 <div class="contenido text-center">
-                    <h3><?php the_title(); ?></h3>
+                    <h3 class="title"><?php the_title(); ?></h3>
                     <?php the_content() ?>
                     <div class="especialidad">
                         <?php
@@ -92,10 +94,44 @@ function gymfitness_instructores()
         wp_reset_postdata();
         ?> <!-- end while, reset postdata -->
 
-    </ui>
+    </ul>
 
 
 
 
 <?php
 };
+
+function gymfitness_testimoniales() {
+    ?>
+    <ul class="listado-testimoniales swiper-wrapper">
+        <?php
+    $args = array(
+        'post_type' => 'testimoniales'
+    );
+
+    $testimoniales = new WP_Query($args);
+
+    while ($testimoniales->have_posts()) {
+        $testimoniales->the_post();
+
+    ?>
+
+        <li class="testimonial text-center swiper-slide">
+            <blockquote>
+                <?php the_content(); ?>
+            </blockquote>
+            <footer class="testimonial-footer">
+                <?php the_post_thumbnail('thumbnail'); ?>
+                <p>
+                    <?php the_title(); ?>
+                </p>
+            </footer>
+        </li>
+    <?php
+    }
+    wp_reset_postdata();
+    ?>
+</ul>
+<?php
+}

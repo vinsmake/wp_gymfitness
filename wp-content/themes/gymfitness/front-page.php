@@ -53,6 +53,12 @@ get_header();
     <?php gymfitness_instructores(); ?>
 </section>
 
+<section class="testimoniales">
+    <h2 class="text-center text-blanco title">Testimonios</h2>
+    <div class="contenedor_testimoniales swiper">
+        <?php gymfitness_testimoniales(); ?>
+    </div>
+</section>
 
 <?php
 get_footer();
